@@ -1,3 +1,13 @@
-# My First Project
+# Jared Eisenhauer - EPK
 
-Welcome to my first GitHub project!
+Electronic Press Kit landing page for Jared Eisenhauer, singer & songwriter.
+
+## Preview Locally
+
+Open `index.html` in your browser, or run a local server:
+
+```bash
+python3 -m http.server 8000
+```
+
+Then visit http://localhost:8000
