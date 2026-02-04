@@ -10,34 +10,62 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Noise Overlay -->
+    <div class="noise-overlay"></div>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">JE</a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#videos" class="nav-link">Videos</a></li>
+                <li><a href="#gallery" class="nav-link">Photos</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#contact" class="nav-link nav-link--cta">Book Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <!-- Hero Section -->
     <header class="hero">
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <p class="hero-tagline">Singer & Songwriter</p>
-            <h1 class="hero-name">Jared Eisenhauer</h1>
-            <p class="hero-description">A catchy mix of original RnB, Americana & Pop</p>
-            <a href="#contact" class="cta-button">Book Now</a>
+            <p class="hero-tagline animate-fade-in">Singer & Songwriter</p>
+            <h1 class="hero-name animate-fade-in animate-delay-1">Jared Eisenhauer</h1>
+            <p class="hero-description animate-fade-in animate-delay-2">Where Soul Meets Americana</p>
+            <p class="hero-subdescription animate-fade-in animate-delay-2">Original music that moves from heartfelt ballads to get-up-and-dance grooves</p>
+            <a href="#contact" class="cta-button animate-fade-in animate-delay-3">Book Now</a>
+        </div>
+        <div class="hero-scroll-indicator">
+            <span class="hero-scroll-text">Scroll</span>
+            <div class="hero-scroll-line"></div>
         </div>
     </header>
 
     <!-- About Section -->
     <section class="about" id="about">
         <div class="container">
-            <h2>About</h2>
-            <p>Jared Eisenhauer is a successful singer & songwriter from Milwaukee, WI, now based in Central Oregon. Known for his catchy mix of original RnB, Americana & pop music, Jared has graced stages from Portland, OR to Detroit, MI.</p>
-            <p>He's opened for and performed with notable artists including <strong>Jeshua Marshall & the Flood</strong>, <strong>Joe Martin & The Electric Street Sign</strong>, <strong>Amargoso</strong>, <strong>Mason James of Double Jump</strong>, and <strong>Miguel Gonzalez</strong>.</p>
-            <p>Jared performs solo, as a duet, or with a full band — playing both originals and covers.</p>
+            <h2 class="section-title animate-on-scroll">About</h2>
+            <div class="about-content animate-on-scroll">
+                <p>From Milwaukee dive bars to Central Oregon's sun-soaked stages, Jared Eisenhauer has spent years crafting a sound that refuses to sit still. His music pulls from RnB grooves, Americana storytelling, and pop hooks — sometimes all in the same song.</p>
+                <p>He's shared stages with <strong>Jeshua Marshall & the Flood</strong>, <strong>Joe Martin & The Electric Street Sign</strong>, <strong>Amargoso</strong>, <strong>Mason James of Double Jump</strong>, and <strong>Miguel Gonzalez</strong> — and whether he's performing solo with a guitar, as a duo, or with a full band, he brings the same energy: music that makes you feel something.</p>
+            </div>
         </div>
     </section>
 
     <!-- Videos Section -->
     <section class="videos" id="videos">
         <div class="container">
-            <h2>Videos</h2>
+            <h2 class="section-title animate-on-scroll">Videos</h2>
             <div class="video-grid">
-                <div class="video-item">
-                    <iframe src="https://www.youtube.com/embed/KXVzAjq3pWc" title="Jared Eisenhauer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="video-item animate-on-scroll">
+                    <iframe src="https://www.youtube.com/embed/KXVzAjq3pWc" title="Jared Eisenhauer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
                 </div>
             </div>
         </div>
@@ -46,25 +74,31 @@
     <!-- Photo Gallery Section -->
     <section class="gallery" id="gallery">
         <div class="container">
-            <h2>Photos</h2>
+            <h2 class="section-title animate-on-scroll">Photos</h2>
             <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="images/gallery-1.jpg" alt="Jared Eisenhauer performing live">
+                <div class="gallery-item animate-on-scroll" style="--animation-order: 1">
+                    <img src="images/gallery-1.jpg" alt="Jared Eisenhauer performing live" loading="lazy">
+                    <div class="gallery-item-overlay"></div>
                 </div>
-                <div class="gallery-item">
-                    <img src="images/gallery-2.jpg" alt="Jared Eisenhauer duo performance">
+                <div class="gallery-item animate-on-scroll" style="--animation-order: 2">
+                    <img src="images/gallery-2.jpg" alt="Jared Eisenhauer duo performance" loading="lazy">
+                    <div class="gallery-item-overlay"></div>
                 </div>
-                <div class="gallery-item">
-                    <img src="images/gallery-3.jpg" alt="Jared Eisenhauer solo performance">
+                <div class="gallery-item animate-on-scroll" style="--animation-order: 3">
+                    <img src="images/gallery-3.jpg" alt="Jared Eisenhauer solo performance" loading="lazy">
+                    <div class="gallery-item-overlay"></div>
                 </div>
-                <div class="gallery-item">
-                    <img src="images/gallery-4.jpg" alt="Jared Eisenhauer live show">
+                <div class="gallery-item animate-on-scroll" style="--animation-order: 4">
+                    <img src="images/gallery-4.jpg" alt="Jared Eisenhauer live show" loading="lazy">
+                    <div class="gallery-item-overlay"></div>
                 </div>
-                <div class="gallery-item">
-                    <img src="images/gallery-5.jpg" alt="Jared Eisenhauer on stage">
+                <div class="gallery-item animate-on-scroll" style="--animation-order: 5">
+                    <img src="images/gallery-5.jpg" alt="Jared Eisenhauer on stage" loading="lazy">
+                    <div class="gallery-item-overlay"></div>
                 </div>
-                <div class="gallery-item">
-                    <img src="images/gallery-6.jpg" alt="Jared Eisenhauer performing">
+                <div class="gallery-item animate-on-scroll" style="--animation-order: 6">
+                    <img src="images/gallery-6.jpg" alt="Jared Eisenhauer performing" loading="lazy">
+                    <div class="gallery-item-overlay"></div>
                 </div>
             </div>
         </div>
@@ -73,15 +107,15 @@
     <!-- Press Section -->
     <section class="press" id="press">
         <div class="container">
-            <h2>Press & Features</h2>
+            <h2 class="section-title animate-on-scroll">Press & Features</h2>
             <div class="press-grid">
-                <div class="press-item">
+                <div class="press-item animate-on-scroll" style="--animation-order: 1">
                     <span class="press-name">The Source Weekly</span>
                 </div>
-                <div class="press-item">
+                <div class="press-item animate-on-scroll" style="--animation-order: 2">
                     <span class="press-name">Bend Roots Revival Festival</span>
                 </div>
-                <div class="press-item">
+                <div class="press-item animate-on-scroll" style="--animation-order: 3">
                     <span class="press-name">KPOV Radio 88.9</span>
                 </div>
             </div>
@@ -91,8 +125,8 @@
     <!-- Venues Section -->
     <section class="venues" id="venues">
         <div class="container">
-            <h2>Venues & Performances</h2>
-            <div class="venues-grid">
+            <h2 class="section-title animate-on-scroll">Venues & Performances</h2>
+            <div class="venues-grid animate-on-scroll">
                 <span class="venue">Silver Moon Brewing</span>
                 <span class="venue">M&J Tavern</span>
                 <span class="venue">Wildwood</span>
@@ -113,29 +147,29 @@
     <!-- Services Section -->
     <section class="services" id="services">
         <div class="container">
-            <h2>Available For</h2>
+            <h2 class="section-title animate-on-scroll">Available For</h2>
             <div class="services-grid">
-                <div class="service-item">
+                <div class="service-item animate-on-scroll" style="--animation-order: 1">
                     <div class="service-icon">&#127926;</div>
                     <h3>Festivals</h3>
                 </div>
-                <div class="service-item">
+                <div class="service-item animate-on-scroll" style="--animation-order: 2">
                     <div class="service-icon">&#127863;</div>
                     <h3>Wine Bars</h3>
                 </div>
-                <div class="service-item">
+                <div class="service-item animate-on-scroll" style="--animation-order: 3">
                     <div class="service-icon">&#128141;</div>
                     <h3>Weddings</h3>
                 </div>
-                <div class="service-item">
+                <div class="service-item animate-on-scroll" style="--animation-order: 4">
                     <div class="service-icon">&#127970;</div>
                     <h3>Corporate Events</h3>
                 </div>
-                <div class="service-item">
+                <div class="service-item animate-on-scroll" style="--animation-order: 5">
                     <div class="service-icon">&#127881;</div>
                     <h3>Private Parties</h3>
                 </div>
-                <div class="service-item">
+                <div class="service-item animate-on-scroll" style="--animation-order: 6">
                     <div class="service-icon">&#127867;</div>
                     <h3>Bars & Breweries</h3>
                 </div>
@@ -146,8 +180,8 @@
     <!-- Influences Section -->
     <section class="influences" id="influences">
         <div class="container">
-            <h2>Influences</h2>
-            <div class="influences-grid">
+            <h2 class="section-title animate-on-scroll">Influences</h2>
+            <div class="influences-grid animate-on-scroll">
                 <span class="influence">Stevie Wonder</span>
                 <span class="influence">Ween</span>
                 <span class="influence">Queens of the Stone Age</span>
@@ -172,19 +206,70 @@
     <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="container">
-            <h2>Get In Touch</h2>
-            <p>Interested in booking Jared for your next event?</p>
-            <a href="mailto:booking@jaredeisenhauer.com" class="cta-button">Contact for Booking</a>
+            <h2 class="section-title animate-on-scroll">Get In Touch</h2>
+            <p class="animate-on-scroll">Ready to bring the perfect soundtrack to your next event? Let's talk.</p>
+            <a href="mailto:booking@jaredeisenhauer.com" class="cta-button animate-on-scroll">Contact for Booking</a>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
+            <div class="footer-links">
+                <!-- Social links will go here when provided -->
+            </div>
             <p class="footer-name">Jared Eisenhauer</p>
             <p class="footer-location">Central Oregon</p>
             <p class="footer-copyright">&copy; 2025 All Rights Reserved</p>
         </div>
     </footer>
+
+    <script>
+        // Navigation scroll effect
+        const nav = document.getElementById('nav');
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                nav.classList.add('nav--scrolled');
+            } else {
+                nav.classList.remove('nav--scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('nav-menu--open');
+            navToggle.classList.toggle('nav-toggle--active');
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('nav-menu--open');
+                navToggle.classList.remove('nav-toggle--active');
+            });
+        });
+
+        // Scroll-triggered animations using Intersection Observer
+        const animateElements = document.querySelectorAll('.animate-on-scroll');
+
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        animateElements.forEach(el => observer.observe(el));
+    </script>
 </body>
 </html>
