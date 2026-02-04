@@ -298,6 +298,19 @@ h1, h2, h3 {
     box-shadow: 0 4px 20px rgba(212, 175, 55, 0.4);
 }
 
+.cta-button--secondary {
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    color: #fff;
+    margin-left: 15px;
+}
+
+.cta-button--secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #fff;
+    box-shadow: none;
+}
+
 /* ============================================
    Section Base Styles
    ============================================ */
