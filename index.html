@@ -68,9 +68,26 @@
     <section class="videos" id="videos">
         <div class="container">
             <h2 class="section-title animate-on-scroll">Videos</h2>
-            <div style="max-width: 800px; margin: 0 auto;">
-                <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
-                    <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/PJdncN1MD8A" title="Jared Eisenhauer - Waiting" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="video-carousel">
+                <div class="video-carousel-track">
+                    <div class="video-thumb" onclick="playVideo('PJdncN1MD8A')">
+                        <img src="https://img.youtube.com/vi/PJdncN1MD8A/hqdefault.jpg" alt="Waiting">
+                        <div class="video-thumb-overlay">
+                            <div class="play-button"></div>
+                        </div>
+                        <span class="video-thumb-title">Waiting</span>
+                    </div>
+                    <!-- More videos will be added here -->
+                </div>
+            </div>
+
+            <!-- Video Modal -->
+            <div class="video-modal" id="videoModal" onclick="closeVideo()">
+                <div class="video-modal-content" onclick="event.stopPropagation()">
+                    <button class="video-modal-close" onclick="closeVideo()">&times;</button>
+                    <div class="video-modal-player">
+                        <iframe id="videoPlayer" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
                 </div>
             </div>
         </div>
@@ -298,6 +315,28 @@
         }, observerOptions);
 
         animateElements.forEach(el => observer.observe(el));
+
+        // Video Modal Functions
+        function playVideo(videoId) {
+            const modal = document.getElementById('videoModal');
+            const player = document.getElementById('videoPlayer');
+            player.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeVideo() {
+            const modal = document.getElementById('videoModal');
+            const player = document.getElementById('videoPlayer');
+            modal.classList.remove('active');
+            player.src = '';
+            document.body.style.overflow = '';
+        }
+
+        // Close on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeVideo();
+        });
     </script>
 </body>
 </html>
