@@ -407,6 +407,11 @@ section {
     border-radius: 8px;
 }
 
+.video-item--large {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
 /* ============================================
    Photo Gallery Section
    ============================================ */
@@ -646,19 +651,33 @@ section {
 .footer-links {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    flex-wrap: wrap;
+    gap: 20px;
     margin-bottom: 30px;
 }
 
 .footer-links a {
-    color: #fff;
+    color: rgba(255, 255, 255, 0.7);
     text-decoration: none;
-    font-size: 0.9rem;
     transition: var(--transition-smooth);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
 }
 
 .footer-links a:hover {
     color: var(--color-primary);
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-3px);
+}
+
+.footer-links svg {
+    width: 20px;
+    height: 20px;
 }
 
 .footer-name {
