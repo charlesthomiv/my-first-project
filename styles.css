@@ -563,6 +563,143 @@ section {
 }
 
 /* ============================================
+   Contact Page
+   ============================================ */
+.contact-page {
+    min-height: 100vh;
+    padding: 140px 0 80px;
+    background: linear-gradient(135deg, var(--color-light) 0%, #fff 100%);
+}
+
+.contact-page-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.contact-page-title {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    color: var(--color-dark);
+    margin-bottom: 15px;
+}
+
+.contact-page-subtitle {
+    font-size: 1.1rem;
+    color: var(--color-text);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.contact-form {
+    max-width: 700px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 50px;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group--full {
+    grid-column: 1 / -1;
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--color-dark);
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 14px 16px;
+    border: 2px solid #e5e5e5;
+    border-radius: 8px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    transition: var(--transition-smooth);
+    background: #fafafa;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    background: #fff;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-group select {
+    cursor: pointer;
+}
+
+.form-submit {
+    width: 100%;
+    padding: 18px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+.contact-alt {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid #e5e5e5;
+}
+
+.contact-alt p {
+    color: var(--color-text);
+    margin-bottom: 10px;
+}
+
+.contact-email {
+    color: var(--color-dark-blue);
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: var(--transition-smooth);
+}
+
+.contact-email:hover {
+    color: var(--color-primary);
+}
+
+@media (max-width: 768px) {
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .contact-form {
+        padding: 30px 25px;
+    }
+
+    .contact-page {
+        padding: 120px 0 60px;
+    }
+}
+
+/* ============================================
    Photo Gallery Section
    ============================================ */
 .gallery {
